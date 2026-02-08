@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        .search-container { text-align: center; margin-bottom: 20px; }
+        #searchInput { padding: 10px; width: 300px; border: 1px solid #ddd; border-radius: 5px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .product-card { background: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .product-card h3 { margin: 10px 0; }
+        .price { color: #2ecc71; font-weight: bold; }
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            flex: 1;
+            padding: 2em;
+            text-align: center;
+         }
+        li,a{
+        text-decoration: none;
+        }
+         li,a:hover{
+           background-color: black;
+
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tecnovant Solutions</h1>
+        <nav>
+            <a href="wel.html" style="color: white; margin: 0 10px;">Register</a>
+            <a href="web.html" style="color: white; margin: 0 10px;">Home</a>
+            <a href="about.html" style="color: white; margin: 0 10px;">About</a>
+            <a href="product.html" style="color: white; margin: 0 10px;">Products</a>
+        </nav>
+    </header>
+
+    <div class="search-container">
+    <h2>Marketplace</h2>
+    <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search for products...">
+</div>
+
+<div class="product-grid" id="productGrid">
+    <div class="product-card">
+        <h3>Laptops</h3>
+        <img src = "laptop.jpg" alt = "Laptop" width="150px"/>
+        <p class="price">kshs 55999</p>
+    </div>
+    <div class="product-card">
+        <h3>Smartphones</h3>
+        <img src = "s25.jpg" alt = "Laptop" width="150px"/>
+        <p class="price">Kshs 50000</p>
+    </div>
+    <div class="product-card">
+        <h3>Headphones</h3>
+        <img src = "headphones.jpg" alt = "Laptop" width="150px"/>
+        <p class="price">Kshs 1500</p>
+    </div>
+    <div class="product-card">
+        <h3>Cameras</h3>
+        <img src = "camera.jpg" alt = "Laptop" width="150px"/>
+        <p class="price">kshs 70000</p>
+    </div>
+</div>
+    
+
+    <main>
+        <h2>Your trusted computer shop in kenya</h2>
+        <p>Looking for a reliable laptop or desktop? At Techovant Solutions, we stock brand-new, refurbished, and custom-built computers to suit every budget. From everyday work laptops to high-performance PCs, we’ve got the perfect machine for you.
+
+Shop our laptops and desktops today.<br>
+
+<h3>Computer Accessories and Peripherals</h3>
+Complete your setup with our wide selection of accessories and peripherals. We provide:
+
+Keyboards, mice & headsets
+
+Monitors & printers
+
+External hard drives & flash drives
+
+Networking devices (routers, switches)
+
+<h3>Genuine Software Solutions</h3>
+Stay protected and productive with genuine, licensed software. We supply and install:
+
+Microsoft Windows & Office packages
+
+Antivirus & security solutions
+
+<h3>Computer Repairs & Upgrades</h3>
+Keep your computer running like new with our professional repair services. We handle:
+
+Computer diagnostics & tune-ups
+
+RAM, SSD, or HDD storage upgrades
+
+Operating system installation
+
+Hard drive replacements
+
+Custom PC builds
+
+Book a repair or upgrade today.
+
+
+<h3>IT Consulting & Support</h3>
+Need expert IT advice? Our consulting services help individuals and businesses make the right technology choices. From hardware selection to network setup, we provide solutions that save time and money.
+
+<h3>Why Choose Techovant Solutions?</h3>
+Wide range of computers & accessories
+
+Affordable prices with great discounts
+
+100% genuine products
+
+Expert IT support & repairs
+
+Delivery within Nairobi and across Kenya</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tecnovant Solutions. All rights reserved.</p>
+        <P>Contacts:
+Email: info@TechnovantSolutions.co.ke<br><br>
+
+Phone:
+0748800900|
+0708600025|<br>
+Projector Spot:
+075708989|<br>
+WhatsApp: 0768 054 460<br>
+Nairobi, Kimathi Street, Old Mutual Building, 2nd Floor Room 211A<br><br>
+
+Opening Hours<br>
+Weekdays: 8:30 AM - 7:00 PM<br>
+
+Saturdays: 9:00 AM - 7:00 PM<br>
+
+Public Holidays: 9:00 AM - 3:30 PM<br>
+
+Closed On Sundays</P>
+    </footer>
+<script src="web.js"></script>
+</body>
+</html>

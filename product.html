@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Marketplace</title>
+    
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        .search-container { text-align: center; margin-bottom: 20px; }
+        #searchInput { padding: 10px; width: 300px; border: 1px solid #ddd; border-radius: 5px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .product-card { background: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .product-card h3 { margin: 10px 0; }
+        .price { color: #2ecc71; font-weight: bold; }
+    </style>
+</head>
+ <title>Product's Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            flex: 1;
+            padding: 2em;
+            text-align: center;
+        }
+        li,a{
+        text-decoration: none;
+        }
+         li,a:hover{
+           background-color: black;
+
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Shop our Wonderful Products</h1>
+        <nav>
+            <a href="wel.html" style="color: white; margin: 0 10px;">Register</a>
+            <a href="#home" style="color: white; margin: 0 10px;">Home</a>
+            <a href="about.html" style="color: white; margin: 0 10px;">About</a>
+            <a href="product.html" style="color: white; margin: 0 10px;">Products</a>
+        </nav>
+    </header>
+    
+<body>
+
+<div class="search-container">
+    <h2>Our Highly Esteemed Products</h2>
+    <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search for products...">
+</div>
+
+<div class="product-grid" id="productGrid">
+     <div class="product-card">
+        <h3>Laptops</h3>
+        <img src = "laptop.jpg" alt = "Laptop" width="150px"/>
+        <p class="price">kshs 55999</p>
+    </div>
+    <div class="product-card">
+        <h3>Smartphones</h3>
+        <img src = "s25.jpg" alt = "Laptop" width="150px"/>
+        <p class="price">Kshs 50000</p>
+    </div>
+    <div class="product-card">
+        <h3>Headphones</h3>
+        <img src = "headphones.jpg" alt = "Laptop" width="150px"/>
+        <p class="price">Kshs 1500</p>
+    </div>
+    <div class="product-card">
+        <h3>Cameras</h3>
+        <img src = "camera.jpg" alt = "Camera" width="150px"/>
+        <p class="price">kshs 70000</p>
+     </div>
+      <div class="product-card">
+        <h3>Microphones</h3>
+        <img src = "microphones.jpg" alt = "Microphone" width="150px"/>
+        <p class="price">kshs 35000</p>
+     </div>
+      <div class="product-card">
+        <h3>Flash Drives</h3>
+        <img src = "usb.jpg" alt = "USB" width="150px"/>
+        <p class="price">kshs 4000</p>
+     </div>
+      <div class="product-card">
+        <h3>Speakers</h3>
+        <img src = "speakers.jpg" alt = "Speaker" width="150px"/>
+        <p class="price">kshs 7000</p>
+     </div>
+</div>
+
+<script>
+    function filterProducts() {
+        let input = document.getElementById('searchInput');
+        let filter = input.value.toUpperCase();
+        let grid = document.getElementById('productGrid');
+        let cards = grid.getElementsByClassName('product-card');
+
+        for (let i = 0; i < cards.length; i++) {
+            let title = cards[i].getElementsByTagName('h3')[0];
+            let txtValue = title.textContent || title.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
